@@ -1,0 +1,50 @@
+@charset "utf-8";
+/*reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, button, textarea, select, p, blockquote, th, td ,table, a , span, i, em, label , img{ margin: 0; padding: 0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {  display: block;}
+audio, canvas, progress, video { display: inline-block; vertical-align: baseline; }
+address, button, caption, em, input, optgroup, option, select, strong, textarea, th {  font: inherit;}
+button, input, optgroup, option, select, textarea { outline: medium none; font-size:100%;  vertical-align:middle;}
+abbr, acronym { border: 0 none; font-variant: normal;}
+sup { vertical-align: baseline;}
+sub { vertical-align: baseline;}
+legend { color: #000;}
+table { border-collapse: collapse;  border-spacing: 0;}
+i,b,em{ font-style: normal; font-weight: normal;}
+fieldset, img , input { border: 0 none;}
+img{  vertical-align:middle;  -ms-interpolation-mode:bicubic; display: block;}
+li { list-style: outside none none;}
+caption, th { text-align: left;}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal;}
+form{ display:inline;}
+textarea{ resize:none;}
+input[type="text"], input[type="tel"],input[type="search"]  { -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+/* 去除iphone ipad 设备默认按钮样式 */
+button,input[type="button"], input[type="reset"], input[type="submit"],input[type="date"],input[type="text"],input[type="password"],input[type="month"],input[type="tel"],input[type="search"] { cursor:pointer; -webkit-appearance:button; -moz-appearance:button;}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none !important; margin: 0;}
+input[type="number"]{-moz-appearance:textfield;}
+input::-moz-placeholder, textarea::-moz-placeholder { color: #b9b8b8; }
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #b9b8b8; }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #b9b8b8; }
+input:focus:-moz-placeholder, input:focus::-webkit-input-placeholder { color:transparent;}
+button::-moz-focus-inner, input::-moz-focus-inner { padding:0; border:0}
+select{ border: 0; background-color: #fff; -webkit-appearance: none }
+
+/*默认数字键盘样式*/
+html { font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif; min-width: 320px; height: 100%; -webkit-tap-highlight-color: transparent; }
+body { height: 100%; overflow-x: hidden; -webkit-user-select: none; -webkit-text-size-adjust: none;  -webkit-overflow-scrolling: touch; -moz-user-select: none; background-color: #fff; }
+a { color: #000; text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; }
+a:visited, a:hover, a:active { color: #000;}
+.btn_c{width:60px;height:28px;background-color:#1FB9FF;float:right;margin-right:5px;text-align:center;color:#fff;line-height:28px;border-radius:3px;margin-bottom:5px;cursor:pointer;}
+.keyoard_hd{text-align:center;width:100%;line-height:39px;background-color:#FFF;border-bottom:1px solid #ddd;font-size:16px;font-weight:700;}
+.keyoard_hd span{position:absolute;left:0;top:0;width:40px;text-align:center;line-height:39px;color:#898989;}
+.keyboard_input{height:0;visibility:hidden;}
+.pw_list{list-style:none;padding:0;margin:0;width:92%;position:absolute;left:4%;top:60px;border:1px solid #c4c4c4;border-radius:3px;}
+.pw_list li{float:left;width:16.6667%;height:40px;line-height:40px;font-size:18px;text-align:center;border-right:1px solid #e6e6e6;box-sizing:border-box;}
+.pw_list li:last-child{border-right:0;}
+.keyboard_table{text-align:center;width:100%;height:216px;background-color:#FFF;position:absolute;bottom:0;left:0;}
+.keyboard_table td{width:33%;height:25%;border:1px solid #ddd;border-right:0;border-top:0;box-sizing:border-box;}
+.keyboard_table td:active{background-color:#1FB9FF;color:#FFF;}
+.keyboard_table span{display: block; font-size: 10px;}
+.keyboard_table .del{background-color:#D3D9DF;background-image: url("../img/delete.png");background-repeat: no-repeat;background-position: 50% 50%;background-size: 23px 17px;}
+.keyboard_table .del:active{background-image: url("../img/delete_w.png");}

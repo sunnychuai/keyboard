@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mykey</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+    <meta name="format-detection" content="telephone=no, address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="css/keyboard.css">
+    <script>
+    var _require_todos = [];
+
+    var require = function() {
+        _require_todos.push(arguments);
+    };
+    </script>
+</head>
+<body>
+<script src="js/config.js" _inline _compress></script>
+<script src="js/lib/require.js"></script>
+<script>
+(function() {
+    var item;
+    while(item = _require_todos.shift()) {
+        require.apply(null, item);
+    }
+})();
+</script>
+<script>
+require(['mykey'], function (module) {
+    module.start();
+});
+</script>    
+</body>
+</html>

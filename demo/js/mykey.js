@@ -1,9 +1,19 @@
 define(function (require) {
     var $ = require('jquery');
-    require('KeyBoard');
+    var keyBoard = require('keyBoard');
 
     var start = function () {
-       var text = new KeyBoard();
+        $('#pay_btn').click(function () {
+            keyBoard({
+                href: '#',
+                remote: {
+                    url: '/login',
+                    data: {
+                        name: '123'
+                    }
+                }
+            });
+        });
     };
 
     return {

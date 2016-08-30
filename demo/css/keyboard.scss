@@ -35,14 +35,18 @@ html { font-family: 'Microsoft Yahei', 'Helvetica Neue', Helvetica, STHeiTi, Ari
 body { height: 100%; overflow-x: hidden; -webkit-user-select: none; -webkit-text-size-adjust: none;  -webkit-overflow-scrolling: touch; -moz-user-select: none; background-color: #fff; }
 a { color: #000; text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent; }
 a:visited, a:hover, a:active { color: #000;}
-.btn_c{width:60px;height:28px;background-color:#1FB9FF;float:right;margin-right:5px;text-align:center;color:#fff;line-height:28px;border-radius:3px;margin-bottom:5px;cursor:pointer;}
-.keyoard_hd{text-align:center;width:100%;line-height:39px;background-color:#FFF;border-bottom:1px solid #ddd;font-size:16px;font-weight:700;}
-.keyoard_hd span{position:absolute;left:0;top:0;width:40px;text-align:center;line-height:39px;color:#898989;}
+.overshade{width:100%;height:100%;background: rgba(0, 0, 0, 0.6);position: absolute;top:0;left:0;z-index:999;}
+.keyoard{position: fixed;bottom:0;left:0;right:0;z-index:1000;width:100%;height:100%;font-size:27px;background:rgba(0,0,0,0.6);}
+.keyoard_hd{position:absolute;left:0;bottom:400px;width:100%;text-align:center;line-height:46px;background-color:#FFF;border-bottom:1px solid #ddd;font-size:18px;font-weight:700;}
+.keyoard_bd{background:#fff;position:absolute;width:100%;bottom:0;left:0;height:400px;}
+.keyoard_close{position:absolute;left:0;top:0;width:16px;padding:0 4%;height:46px;color:#898989;background:url("../img/keyboard_close.png") no-repeat center center; background-size:16px 16px;}
+.keyboard_feild{overflow:hidden;padding-bottom:84px;}
 .keyboard_input{height:0;visibility:hidden;}
-.pw_list{list-style:none;padding:0;margin:0;width:92%;position:absolute;left:4%;top:60px;border:1px solid #c4c4c4;border-radius:3px;}
-.pw_list li{float:left;width:16.6667%;height:40px;line-height:40px;font-size:18px;text-align:center;border-right:1px solid #e6e6e6;box-sizing:border-box;}
+.pw_list{list-style:none;padding:0;margin:0;width:92%;margin-left:4%;overflow:hidden;border:1px solid #c4c4c4;border-radius:3px;}
+.pw_list li{float:left;width:16.6667%;height:42px;line-height:42px;font-size:18px;text-align:center;border-right:1px solid #e6e6e6;box-sizing:border-box;}
 .pw_list li:last-child{border-right:0;}
-.keyboard_table{text-align:center;width:100%;height:216px;background-color:#FFF;position:absolute;bottom:0;left:0;}
+a.keyboard_find_pwd{color:#1FB9FF;float:right;padding-right:4%;font-size:14px;margin-top:10px;}
+.keyboard_table{text-align:center;width:100%;height:216px;background-color:#FFF;}
 .keyboard_table td{width:33%;height:25%;border:1px solid #ddd;border-right:0;border-top:0;box-sizing:border-box;}
 .keyboard_table td:active{background-color:#1FB9FF;color:#FFF;}
 .keyboard_table span{display: block; font-size: 10px;}

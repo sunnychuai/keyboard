@@ -60,17 +60,21 @@
         self.pw = document.getElementById(ulID).getElementsByTagName('li');
 
         var loading = function () {
-            var load = document.createElement('div');
-            load.id = 'kb_load';
-            load.className = 'keyboard_load';
-            load.innerHTML = '<div class="loading"><span>正在付款...</span></div>';
-            keyboardBd.appendChild(load);
-            return load;
+            setTimeout(function() {
+                var load = document.createElement('div');
+                load.id = 'kb_load';
+                load.className = 'keyboard_load';
+                load.innerHTML = '<div class="loading"><span>正在付款...</span></div>';
+                keyboardBd.appendChild(load);
+                return load;
+            }, 30);
         };
 
         var removeLoading = function () {
-            var load = document.getElementById('kb_load') || '';
-            keyboardBd.removeChild(load);
+            setTimeout(function() {
+                var load = document.getElementById('kb_load') || '';
+                keyboardBd.removeChild(load);
+            }, 30);
         };
 
         var toast = function (type, mess, callback) {
@@ -117,7 +121,6 @@
         }
          
         function ajax(config) {
-            loading();
             config = config || {};
             config.url = config.url || '';
             config.type = (config.type || "POST").toUpperCase();
@@ -125,6 +128,7 @@
             config.dataType = config.dataType || "json";
             config.success = config.success || success;
             config.fail = config.fail || fail;
+            loading();
 
             var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
             sendXhrRequest(xhr, config.type, config.url, formatParams(config.data));

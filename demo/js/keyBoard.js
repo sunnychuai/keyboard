@@ -84,7 +84,7 @@
             body.appendChild(dialog);
             setTimeout(function() {
                 body.removeChild(dialog);
-                callback();
+                callback && callback();
             }, 2000);
         };
 
@@ -177,7 +177,7 @@
         }
 
         function fail(status) {
-            toast('fail', '请求失败,状态码为' + status, function () {});
+            toast('fail', '请求失败,状态码为' + status);
         }
     }
     return keyBoard;

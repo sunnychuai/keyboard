@@ -6,10 +6,13 @@ define(function (require) {
         $('#pay_btn').click(function () {
             keyBoard({
                 href: '#',
+                name: 'payPwd',
                 remote: {
-                    url: '/login',
+                    url: 'mock/test.json',
+                    type: "post",
                     data: {
-                        name: '123'
+                        name: '123',
+                        age: 24
                     }
                 }
             });
